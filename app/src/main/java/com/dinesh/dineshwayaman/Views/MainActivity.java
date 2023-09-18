@@ -1,8 +1,10 @@
-package com.dinesh.dineshwayaman;
+package com.dinesh.dineshwayaman.Views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.dinesh.dineshwayaman.R;
 
 public class MainActivity extends AppCompatActivity {
 
