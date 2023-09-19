@@ -12,7 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
-        android:textSize="25sp"/>
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnViewProf"
@@ -21,6 +22,9 @@
         android:layout_height="45dp"
         android:layout_marginTop="10dp"
         android:text="View Profile"
-        android:background="@drawable/rounded_btn"/>
+        android:background="@drawable/rounded_btn"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"/>
+
 
 </RelativeLayout>

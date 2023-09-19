@@ -6,7 +6,7 @@ public class UserData {
     int id;
     String email;
     String name;
-    Date dob;
+    String dob;
     String gender;
     String company;
     String position;
@@ -36,11 +36,11 @@ public class UserData {
         this.name = name;
     }
 
-    public Date getDob() {
+    public String getDob() {
         return dob;
     }
 
-    public void setDob(Date dob) {
+    public void setDob(String dob) {
         this.dob = dob;
     }
 
