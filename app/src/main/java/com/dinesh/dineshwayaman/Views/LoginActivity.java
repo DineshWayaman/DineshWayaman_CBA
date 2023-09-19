@@ -33,7 +33,6 @@ public class LoginActivity extends AppCompatActivity {
     private EditText edtName, edtPassword;
     private AppCompatButton btnLogin;
 
-    private TextView txtError;
 
     SharedPreferences sharedPreferences;
 
@@ -51,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
             String name =  edtName.getText().toString();
             String password = edtPassword.getText().toString();
 
+//            check input fields are empty
             if(name.length() == 0 || password.length() == 0){
                 Toast.makeText(this, "Username and password are mandatory", Toast.LENGTH_SHORT).show();
             }else{
@@ -91,6 +91,7 @@ public class LoginActivity extends AppCompatActivity {
                     if (loginResponse.getRes_code() == 0){
                         UserData userData = loginResponse.getUser_data();
 
+//                        if login success save response data into shared preference for future use
 
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putInt("id", userData.getId());
@@ -116,8 +117,9 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
-//                Toast.makeText(LoginActivity.this, t.toString(), Toast.LENGTH_SHORT).show();
-                txtError.setText(t.toString());
+
+                Toast.makeText(LoginActivity.this, t.toString(), Toast.LENGTH_SHORT).show();
+
 
 
             }
@@ -129,7 +131,7 @@ public class LoginActivity extends AppCompatActivity {
         edtName = findViewById(R.id.edtName);
         edtPassword = findViewById(R.id.edtPassword);
         btnLogin = findViewById(R.id.btnLogin);
-        txtError = findViewById(R.id.txtError);
+
 
     }
 

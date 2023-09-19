@@ -64,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
         txtPosition = dialog.findViewById(R.id.txtPosition);
         btnClose = dialog.findViewById(R.id.btnClose);
 
+
+//        set data to dialog text fields
+
         txtID.setText("ID: " + String.valueOf(id));
         txtName.setText("Name: " +name);
         txtEmail.setText("Email: "+email);
@@ -81,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initializeShareds() {
+
+//        get saves shared preference data to display
         sharedPreferences = getSharedPreferences("user", MODE_PRIVATE);
          id = sharedPreferences.getInt("id", 0);
          name = sharedPreferences.getString("name", "");
